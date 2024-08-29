@@ -1,0 +1,20 @@
+{
+    "1": {
+        "params": "{'x': 60, 'y': 20}",
+        "constparams": "[]",
+        "coverage": "[0, 1, 2, 4]",
+        "pc": "[0, 2]",
+        "pcEval": "[True, False]",
+        "symbEnc": "{'x': 'x', 'y': 'y + 50 + 80'}",
+        "constraints": "[x > 50, Not(False)]"
+    },
+    "2": {
+        "params": "{'x': 50, 'y': 20}",
+        "constparams": "[]",
+        "coverage": "[0, 3, 4]",
+        "pc": "[0]",
+        "pcEval": "[False]",
+        "symbEnc": "{'x': 'x', 'y': 'y - 20 + 80'}",
+        "constraints": "[Not(x > 50)]"
+    }
+}

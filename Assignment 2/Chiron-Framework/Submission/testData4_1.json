@@ -1,0 +1,38 @@
+{
+    "1": {
+        "params": "{'x': 80, 'y': 60, 'z': 20, 'c1': 10, 'c2': 20, 'c3': 30, 'c4': 40}",
+        "constparams": "[':c1', ':c2', ':c3', ':c4']",
+        "coverage": "[0, 1, 2, 4, 7]",
+        "pc": "[0, 2, 4]",
+        "pcEval": "[True, False, False]",
+        "symbEnc": "{'x': 'x', 'y': 'y + c1 - c4', 'z': 'z', 'c1': 'c1', 'c2': 'c2', 'c3': 'c3', 'c4': 'c4'}",
+        "constraints": "[x > 50, Not(False), Not(z > 100)]"
+    },
+    "2": {
+        "params": "{'x': 51, 'y': 60, 'z': 101, 'c1': 10, 'c2': 20, 'c3': 30, 'c4': 40}",
+        "constparams": "[':c1', ':c2', ':c3', ':c4']",
+        "coverage": "[0, 1, 2, 4, 5, 6]",
+        "pc": "[0, 2, 4, 6]",
+        "pcEval": "[True, False, True, False]",
+        "symbEnc": "{'x': 'x', 'y': 'y + c1 + c3', 'z': 'z', 'c1': 'c1', 'c2': 'c2', 'c3': 'c3', 'c4': 'c4'}",
+        "constraints": "[x > 50, Not(False), z > 100, Not(False)]"
+    },
+    "3": {
+        "params": "{'x': 50, 'y': 60, 'z': 101, 'c1': 10, 'c2': 20, 'c3': 30, 'c4': 40}",
+        "constparams": "[':c1', ':c2', ':c3', ':c4']",
+        "coverage": "[0, 3, 4, 5, 6]",
+        "pc": "[0, 4, 6]",
+        "pcEval": "[False, True, False]",
+        "symbEnc": "{'x': 'x', 'y': 'y - c2 + c3', 'z': 'z', 'c1': 'c1', 'c2': 'c2', 'c3': 'c3', 'c4': 'c4'}",
+        "constraints": "[Not(x > 50), z > 100, Not(False)]"
+    },
+    "4": {
+        "params": "{'x': 50, 'y': 60, 'z': 100, 'c1': 10, 'c2': 20, 'c3': 30, 'c4': 40}",
+        "constparams": "[':c1', ':c2', ':c3', ':c4']",
+        "coverage": "[0, 3, 4, 7]",
+        "pc": "[0, 4]",
+        "pcEval": "[False, False]",
+        "symbEnc": "{'x': 'x', 'y': 'y - c2 - c4', 'z': 'z', 'c1': 'c1', 'c2': 'c2', 'c3': 'c3', 'c4': 'c4'}",
+        "constraints": "[Not(x > 50), Not(z > 100)]"
+    }
+}
